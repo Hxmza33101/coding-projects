@@ -1,0 +1,96 @@
+body {
+    background-color: #969090;
+}
+
+.container {
+    margin: 100px auto;
+    width: 300px;
+    height: 400px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: #dddddd 1px solid;
+    border-radius: 20px;
+    background-color: rgb(55, 59, 58);
+}
+
+.display-input {
+    width: 95%;
+    height: 60px;
+    background-color: #333333;
+    color: white;
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 25px;
+    /*padding: 10px;*/
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace ;
+    font-size: 30px;
+    border: #dddddd 1px solid;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 60px 60px 60px 60px;
+    column-gap: 10px;
+    row-gap: 15px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+.buttons button {
+    background-color: #4CAF50;
+    border-radius: 11px;
+    border: #dddddd 0.5px solid;
+    font-size: 20px;
+    padding: 0px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 0.5px 1px 1px black;
+}
+
+#clear {
+    background-color: orangered;
+}
+
+#clear:hover {
+    background-color: #ff5722;
+}
+
+#clear:active {
+    background-color: #e64a19;
+}
+
+#remove {
+    background-color: #f44336;
+}
+
+#remove:hover {
+    background-color: #d32f2f;
+}
+
+#remove:active {
+    background-color: #c62828;
+}
+
+#equals {
+    background-color: #C79A3E;
+}
+
+#equals:hover {
+    background-color: #b4872d; 
+}
+
+#equals:active {
+    background-color: #8b6a1f;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+}
+
+.buttons button:active {
+    background-color: #397d3a;
+}
