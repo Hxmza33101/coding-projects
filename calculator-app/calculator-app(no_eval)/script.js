@@ -1,6 +1,5 @@
 let display = ' ';
 
-
 for (let i = 0; i < 10; i++) {
     document.getElementById(i.toString()).addEventListener('click', function() {
         appendValue(i.toString());
@@ -58,13 +57,24 @@ function clearDisplay() {
 }
 
 function evaluateExpression() {
-    try {
-        display = eval(display).toString();
-        document.getElementById('display-input').value = display;
-        console.log(display);
-    } catch (error) {
-        document.getElementById('display-input').value = 'Error';
-        display = '';
-        console.error('Invalid expression:', error);
+    let stack = [];
+    let stack1 = [];
+
+    let x = 0;
+    let tempString = '';
+    while (x < display.length) {
+        if ((display[i] > '0' && display[i] < '9') || display[i] == '.') {
+            tempString += display[i];
+        } else if (display[i] == '+' || display[i] == '-' || display[i] == '*' || display[i] == '/') {
+            stack.push(tempString);
+            stack.push(display[i]);
+        }
+        x++;
+    }
+
+    for (let j = 0; j < stack.length; j++) {
+        if (stack[i] == '*' || stack[i] == '/') {
+
+        }
     }
 }
