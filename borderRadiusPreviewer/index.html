@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Border Radius Previewer</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <div class="container">
+        <div class="box" id="box">
+        </div>
+        <div class="inputs">
+            <h3>Border Radius</h3>
+            <div class="sliders">
+                <div class="top-left-slider">
+                    <p class="top-left-p">top-left</p>
+                    <input type="range" min="0" max="100" value="0" class="top-left" id="top-left">
+                </div>
+                <div class="top-right-slider">
+                    <p class="top-right-p">top-right</p>
+                    <input type="range" min="0" max="100" value="0" class="top-left" id="top-right">
+                </div>
+                <div class="bottom-left-slider">
+                    <p class="bottom-left-p">bottom-left</p>
+                    <input type="range" min="0" max="100" value="0" class="bottom-left" id="bottom-left">
+                </div>
+                <div class="bottom-right-slider">
+                    <p class="bottom-right-p">bottom-right</p>
+                    <input type="range" min="0" max="100" value="0" class="bottom-right" id="bottom-right">
+                </div>
+            </div>
+            <button class="copy" onclick="copyCSS()">Copy CSS</button>
+        </div>
+    </div>
+    </body>
+    <script src="script.js"></script>
+</html>

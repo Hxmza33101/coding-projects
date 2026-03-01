@@ -1,0 +1,50 @@
+.box {
+    width: 350px;
+    height: 350px;
+    background-color: brown;
+
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    margin-top: 180px;
+    margin-left: 380px;
+}
+
+.inputs {
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.top-right-p, .top-left-p, .bottom-right-p, .bottom-left-p, .copy {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px
+}
+
+.top-left, .top-right, .bottom-left, .bottom-right {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.copy {
+    margin-bottom: 10px;
+}
+
+h3 {
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
