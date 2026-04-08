@@ -1,0 +1,100 @@
+:root {
+    --bg-color: #FAF8F4;
+    --surface: #FFFFFF;
+    --primary-text: #1A1A1A;
+    --muted-text: #000000;
+    --border: #E0E0DC;
+
+    --income: #639922;
+    --income-badge-bg: #EAF3DE;
+    --income-badge-text: #3B6D11;
+
+    --spending: #BA7517;
+    --spending-badge-bg: #FAEEDA;
+    --spending-badge-text: #854F0B;
+
+    --over: #E24B4A;
+    --over-badge-bg: #FCEBEB;
+    --over-badge-text: #A32D2D;
+
+    --heading-font: Inter;
+    --font: Inter;
+  }
+  
+  /* Dark theme */
+  [data-theme="dark"] {
+    --bg-color: #16181C;
+    --surface: #1E2127;
+    --primary-text: #F0F0EE;
+    --muted-text: #8A8F9A;
+    --border: #2E3139;
+
+    --income: #97C459;
+    --income-badge-bg: #27500A;
+    --income-badge-text: #C0DD97;
+
+    --spending-badge-bg: #633806;
+    --spending-badge-text: #FAC775;
+
+    --over-badge-bg: #791F1F;
+    --over-badge-text: #F7C1C1;
+
+    --heading-font: Space Grotesk;
+    --font: Space Grotesk;
+  }
+
+  [data-theme="warm"] {
+    --bg-color: #FAF8F4;
+    --surface: #F3EDE3;
+    --primary-text: #2C1F0E;
+    --muted-text: #9A7E5C;
+    --border: #E4D8C8;
+
+    --income: #639922;
+    --income-badge-bg: #EAF3DE;
+    --income-badge-text: #3B6D11;
+
+    --spending: #BA7517;
+    --spending-badge-bg: #FAEEDA;
+    --spending-badge-text: #854F0B;
+
+    --over: #E24B4A;
+    --over-badge-bg: #FCEBEB;
+    --over-badge-text: #A32D2D;
+
+    --heading-font: Lora;
+    --font: Nunito;
+  }
+
+  [data-theme="modern"] {
+    --bg-color: #FAF8F4;
+    --surface: #FFFFFF;
+    --primary-text: #1A1A1A;
+    --muted-text: #000000;
+    --border: #E0E0DC;
+
+    --income: #639922;
+    --income-badge-bg: #EAF3DE;
+    --income-badge-text: #3B6D11;
+
+    --spending: #BA7517;
+    --spending-badge-bg: #FAEEDA;
+    --spending-badge-text: #854F0B;
+
+    --over: #E24B4A;
+    --over-badge-bg: #FCEBEB;
+    --over-badge-text: #A32D2D;
+
+    --heading-font: Plus Jakarta Sans;
+    --font: Plus Jakarta Sans;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+  }
+
+  .main-title {
+    border: 1px solid var(--border);
+    text-align: center;
+  }

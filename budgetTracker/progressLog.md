@@ -3,3 +3,6 @@ Had the boilerplate already written from before. Today I'm just drawing out poss
 
 ## 1/4/26
 Didn't work on project at all today, was completing work for systems programming unit, will try to do some code tomorrow.
+
+## 8/4/26
+Haven't been updating this log, however there are updates in the leetcode repository's progress log
