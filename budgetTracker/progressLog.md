@@ -6,3 +6,6 @@ Didn't work on project at all today, was completing work for systems programming
 
 ## 8/4/26
 Haven't been updating this log, however there are updates in the leetcode repository's progress log. Added css variables for hte different themes the website will have
+
+## 9/4/26
+Was working on Uni assignment, forgot to commit this in time so the streak is getting demolished
