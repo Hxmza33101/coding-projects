@@ -1,101 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
 :root {
-    --bg-color: #FAF8F4;
-    --surface: #FFFFFF;
-    --primary-text: #1A1A1A;
-    --muted-text: #000000;
-    --border: #E0E0DC;
+  --bg-color: #FAF8F4; --surface: #FFFFFF; --primary-text: #1A1A1A;
+  --muted-text: #6B6B6B; --border: #E0E0DC;
+  --income: #639922; --income-badge-bg: #EAF3DE; --income-badge-text: #3B6D11;
+  --spending: #BA7517; --spending-badge-bg: #FAEEDA; --spending-badge-text: #854F0B;
+  --over: #E24B4A; --over-badge-bg: #FCEBEB; --over-badge-text: #A32D2D;
+  --heading-font: 'Inter', sans-serif; --font: 'Inter', sans-serif;
+}
 
-    --income: #639922;
-    --income-badge-bg: #EAF3DE;
-    --income-badge-text: #3B6D11;
+[data-theme="dark"] {
+  --bg-color: #16181C; --surface: #1E2127; --primary-text: #F0F0EE;
+  --muted-text: #8A8F9A; --border: #2E3139;
+  --income: #97C459; --income-badge-bg: #27500A; --income-badge-text: #C0DD97;
+  --spending: #EF9F27; --spending-badge-bg: #633806; --spending-badge-text: #FAC775;
+  --over: #F09595; --over-badge-bg: #791F1F; --over-badge-text: #F7C1C1;
+  --heading-font: 'Space Grotesk', sans-serif; --font: 'Space Grotesk', sans-serif;
+}
 
-    --spending: #BA7517;
-    --spending-badge-bg: #FAEEDA;
-    --spending-badge-text: #854F0B;
+[data-theme="warm"] {
+  --bg-color: #FAF8F4; --surface: #F3EDE3; --primary-text: #2C1F0E;
+  --muted-text: #9A7E5C; --border: #E4D8C8;
+  --income: #639922; --income-badge-bg: #EAF3DE; --income-badge-text: #3B6D11;
+  --spending: #BA7517; --spending-badge-bg: #FAEEDA; --spending-badge-text: #854F0B;
+  --over: #E24B4A; --over-badge-bg: #FCEBEB; --over-badge-text: #A32D2D;
+  --heading-font: 'Lora', serif; --font: 'Nunito', sans-serif;
+}
 
-    --over: #E24B4A;
-    --over-badge-bg: #FCEBEB;
-    --over-badge-text: #A32D2D;
+[data-theme="modern"] {
+  --bg-color: #FAF8F4; --surface: #FFFFFF; --primary-text: #1A1A1A;
+  --muted-text: #6B6B6B; --border: #E0E0DC;
+  --heading-font: 'Plus Jakarta Sans', sans-serif; --font: 'Plus Jakarta Sans', sans-serif;
+}
 
-    --heading-font: Inter;
-    --font: Inter;
-  }
-  
-  /* Dark theme */
-  [data-theme="dark"] {
-    --bg-color: #16181C;
-    --surface: #1E2127;
-    --primary-text: #F0F0EE;
-    --muted-text: #8A8F9A;
-    --border: #2E3139;
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    --income: #97C459;
-    --income-badge-bg: #27500A;
-    --income-badge-text: #C0DD97;
+body {
+  background: var(--bg-color);
+  color: var(--primary-text);
+  font-family: var(--font);
+  padding: 1.5rem;
+}
 
-    --spending: ;
-    --spending-badge-bg: #633806;
-    --spending-badge-text: #FAC775;
+.main-title {
+  font-family: var(--heading-font);
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.3px;
+}
 
-    --over-badge-bg: #791F1F;
-    --over-badge-text: #F7C1C1;
+/* ── Grid ── */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
 
-    --heading-font: Space Grotesk;
-    --font: Space Grotesk;
-  }
+.current-balance { grid-column: 1 / -1; }
+.summary-panel   { grid-column: 1 / -1; }
 
-  [data-theme="warm"] {
-    --bg-color: #FAF8F4;
-    --surface: #F3EDE3;
-    --primary-text: #2C1F0E;
-    --muted-text: #9A7E5C;
-    --border: #E4D8C8;
+/* ── Panels ── */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+}
 
-    --income: #639922;
-    --income-badge-bg: #EAF3DE;
-    --income-badge-text: #3B6D11;
+.panel-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-text);
+  margin-bottom: 8px;
+}
 
-    --spending: #BA7517;
-    --spending-badge-bg: #FAEEDA;
-    --spending-badge-text: #854F0B;
+.panel-value {
+  font-family: var(--heading-font);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 14px;
+  line-height: 1.1;
+}
 
-    --over: #E24B4A;
-    --over-badge-bg: #FCEBEB;
-    --over-badge-text: #A32D2D;
+.income-value  { color: var(--income); }
+.spending-value { color: var(--spending); }
 
-    --heading-font: Lora;
-    --font: Nunito;
-  }
+/* ── Balance row ── */
+.balance-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.balance-inner .panel-value { font-size: 40px; margin-bottom: 0; }
 
-  [data-theme="modern"] {
-    --bg-color: #FAF8F4;
-    --surface: #FFFFFF;
-    --primary-text: #1A1A1A;
-    --muted-text: #000000;
-    --border: #E0E0DC;
+/* ── Buttons ── */
+.panel-btn {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-color);
+  color: var(--primary-text);
+  cursor: pointer;
+}
 
-    --income: #639922;
-    --income-badge-bg: #EAF3DE;
-    --income-badge-text: #3B6D11;
+.btn-income {
+  background: var(--income-badge-bg);
+  border-color: var(--income);
+  color: var(--income-badge-text);
+}
+.btn-spending {
+  background: var(--spending-badge-bg);
+  border-color: var(--spending);
+  color: var(--spending-badge-text);
+}
 
-    --spending: #BA7517;
-    --spending-badge-bg: #FAEEDA;
-    --spending-badge-text: #854F0B;
+/* ── Summary ── */
+.summary-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
 
-    --over: #E24B4A;
-    --over-badge-bg: #FCEBEB;
-    --over-badge-text: #A32D2D;
+.summary-item {
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+}
 
-    --heading-font: Plus Jakarta Sans;
-    --font: Plus Jakarta Sans;
-  }
-  
-  body {
-    background-color: var(--bg-color);
-    color: var(--primary-text);
-  }
+.income-item   { background: var(--income-badge-bg); }
+.spending-item { background: var(--spending-badge-bg); }
+.over-item     { background: var(--over-badge-bg); }
 
-  .main-title {
-    border: 1px solid var(--border);
-    text-align: center;
-  }
+.summary-item-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.income-item   .summary-item-label { color: var(--income-badge-text); }
+.spending-item .summary-item-label { color: var(--spending-badge-text); }
+.over-item     .summary-item-label { color: var(--over-badge-text); }
+
+.summary-item-value {
+  font-family: var(--heading-font);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.income-item   .summary-item-value { color: var(--income-badge-text); }
+.spending-item .summary-item-value { color: var(--spending-badge-text); }
+.over-item     .summary-item-value { color: var(--over-badge-text); }

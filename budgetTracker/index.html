@@ -9,13 +9,56 @@
 <body>
     <h1 class="main-title">Budget Tracker</h1>
 
-    <div class="current-balance">
-        <h1>Current Balance</h1>
-        <p>$</p>
+    <div class="dashboard-grid">
+
+    <div class="panel current-balance">
+    <div class="balance-inner">
+      <div>
+        <p class="panel-label">Current Balance</p>
+        <p class="panel-value">$<span id="current-balance">0</span></p>
+      </div>
+      <button class="panel-btn" id="edit-balance">Edit Balance</button>
+    </div>
     </div>
 
-    <div class="control-panel">
-        <button id="Add">Add Money</button>
+    <div div class="panel goal-panel">
+        <p class="panel-label">Goal</p>
+        <p class="panel-value">$<span id="goal">0</span></p>
+        <button class="panel-btn">Set Goal</button>
     </div>
+
+    <div class="panel income-panel">
+        <p class="panel-label">Income</p>
+        <p class="panel-value income-value">$<span id="income">0</span></p>
+        <button class="panel-btn btn-income">+ Add Income</button>
+    </div>
+
+    <div class="panel spending-panel">
+        <p class="panel-label">Spending</p>
+        <p class="panel-value spending-value">$<span id="spending">0</span></p>
+        <button class="panel-btn btn-spending">+ Add Spending</button>
+    </div>
+
+    <div class="panel summary-panel">
+        <p class="panel-label">Summary</p>
+        <div class="summary-row">
+        <div div class="summary-item income-item">
+            <p class="summary-item-label">Total Income</p>
+            <p class="summary-item-value">$<span id="total-income">0</span></p>
+        </div>
+        <div class="summary-item spending-item">
+            <p class="summary-item-label">Total Spending</p>
+            <p class="summary-item-value">$<span id="total-spending">0</span></p>
+        </div>
+        <div class="summary-item over-item">
+            <p class="summary-item-label">Over Budget</p>
+            <p class="summary-item-value">$<span id="total-over">0</span></p>
+        </div>
+        </div>
+    </div>
+
+    </div>
+
 </body>
+<script src="script.js"></script>
 </html>
