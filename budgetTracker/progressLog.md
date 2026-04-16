@@ -13,3 +13,6 @@ Worked on the html and css code for the budget tracker project, its starting to 
 
 ## 11/4/26
 Nothing for the project, today, am doing DSA today.
+
+## 16/4/26
+Started the logic for the budget tracker in the JS file, created 'state' object with variables for different elements of the budget tracker such as the balance and spending.
